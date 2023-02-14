@@ -1,0 +1,214 @@
+.login-wrapper {
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.login-container {
+    width: 370px;
+    min-height: 500px;
+    height:500px;
+    padding-bottom: 20px;
+    margin: auto;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-shadow: 0 0 50px -15px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: 0 0 50px -15px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 50px -15px rgba(0, 0, 0, 0.9);
+}
+
+/* .login-header-title {
+    background-position: center;
+    padding: 30px 10px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    animation: header 8s linear infinite;
+} */
+
+.login-form {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 50px 50px;
+    box-sizing: border-box;
+}
+
+.input-container {
+    width: 100%;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+input.login-input-item {
+    height: 30px;
+    width: 100%;
+    font-size: 15px;
+    border: 0;
+    color: #555555;
+    line-height: 1.2;
+    display: block;
+    background: transparent;
+}
+
+.login-input-item-selection {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.login-input-item-selection::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    -webkit-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s;
+    background: #91ceec;
+}
+
+input.login-input-item:focus+.login-input-item-selection::before {
+    width: 100%;
+}
+
+input.login-input-item:focus {
+    outline-width: 0;
+}
+
+.form-links-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-button-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.login-button {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    margin-top: 70px;
+    width: 100%;
+    height: 40px;
+    background-color: #3f87c6;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    border: 0;
+    cursor: pointer;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.login-button:hover {
+    background-color: #0e62ab;
+}
+
+.login-button:active {
+    outline: none;
+    border: none;
+}
+
+.login-button:focus {
+    outline: 0;
+}
+
+input.login-input-item:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input.login-input-item:focus:-moz-placeholder {
+    color: transparent;
+}
+
+input.login-input-item:focus::-moz-placeholder {
+    color: transparent;
+}
+
+input.login-input-item:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+input.login-input-item::-webkit-input-placeholder {
+    color: #bebebe;
+}
+
+input.login-input-item:-moz-placeholder {
+    color: #bebebe;
+}
+
+input.login-input-item::-moz-placeholder {
+    color: #bebebe;
+}
+
+input.login-input-item:-ms-input-placeholder {
+    color: #bebebe;
+}
+
+.page-bg-color {
+    background-color: #ebeeef;
+}
+
+.forgot-password-link {
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #999999;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}

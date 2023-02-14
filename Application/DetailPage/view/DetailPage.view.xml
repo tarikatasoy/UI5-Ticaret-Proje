@@ -1,0 +1,75 @@
+<mvc:View controllerName="com.UI5Starter.Application.DetailPage.controller.DetailPage"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	height="100%">
+	<Page
+		title="DETAIL PAGE"
+		class="sapUiContentPadding 
+sapUiResponsivePadding--header
+sapUiResponsivePadding--subHeader
+sapUiResponsivePadding--content
+sapUiResponsivePadding--footer"
+		showNavButton="true"
+		navButtonPress="onNavBack"
+		id="p2">
+		<Page
+			id="idPage"
+			showHeader='false'
+			class="sapUiResponsivePadding--header">
+			<content>
+				<IconTabBar
+					expanded="{device>/isNoPhone}"
+					class="sapUiSmallMarginBottom sapUiResponsiveContentPadding">
+					<items>
+						<IconTabFilter
+							text="{/SelectedProduct/title}">
+							<f:SimpleForm
+								minWidth="1024"
+								maxContainerCols="2"
+								layout="ResponsiveGridLayout">
+								<VBox>
+									<HBox alignContent="SpaceAround">
+										<Image src="{/SelectedProduct/image}" width="180px"
+											height="230px" />
+										<VBox>
+											<Label design="Bold"
+												text="CATEGORY: {/SelectedProduct/category}" />
+											<Label text="" />
+											<Label wrapping="true"
+												text="{/SelectedProduct/description}" />
+											<Label text="" />
+											<Label text="" />
+
+											<VBox FlexAlignItems="Center">
+												<HBox justifyContent="End">
+
+													<Label text="Fiyat" />
+													<Label text=":" />
+													<Label text="{/SelectedProduct/price} $" />
+
+												</HBox>
+												<HBox justifyContent="End">
+													<Button icon="sap-icon://less"
+														press="decrementQuantity" />
+													<Input id="quantity" value="1" width="50px" />
+													<Button icon="sap-icon://add"
+														press="incrementQuantity" />
+												</HBox>
+												<HBox justifyContent="End">
+													<Button text="Add to Cart" press="sepetEkle" />
+												</HBox>
+											</VBox>
+
+										</VBox>
+									</HBox>
+								</VBox>
+							</f:SimpleForm>
+						</IconTabFilter>
+					</items>
+				</IconTabBar>
+			</content>
+		</Page>
+	</Page>
+</mvc:View>

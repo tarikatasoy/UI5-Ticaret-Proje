@@ -1,0 +1,21 @@
+<mvc:View controllerName="com.UI5Starter.Application.Dashboard.controller.Dashboard"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	height="100%"
+	>
+	<Page enableScrolling="false" showHeader="false">
+		<NavContainer
+			id="navCon"
+			width="100%"
+			height="100%"
+			class="navContainerControl sapUiSmallMarginBottom">
+			<Page id="p1" showHeader="false">
+			<mvc:XMLView viewName="com.UI5Starter.Application.HomePage.view.HomePage" />
+			</Page>
+			<Page id="p2" showHeader="false">
+			<mvc:XMLView viewName="com.UI5Starter.Application.DetailPage.view.DetailPage" />
+		   </Page>
+		</NavContainer>
+	</Page>
+	</mvc:View>

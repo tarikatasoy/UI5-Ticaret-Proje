@@ -1,0 +1,52 @@
+<mvc:View controllerName="com.UI5Starter.Application.HomePage.controller.HomePage"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:ps='com.UI5Starter.Resources.components'
+	height="100%">
+	<Page
+		id="1"
+		title="PRODUCTS"
+	>
+		<headerContent>
+			<Button text="sepet" icon="sap-icon://action" tooltip="Share" press="gecis" />
+		</headerContent>
+
+		<Label text="Detaylı ürün aramak için kullanın;" width="100%" />
+		<ps:ProductSearch ProductList="urun"></ps:ProductSearch>
+
+		<Table id="idTable" items="{
+		path: '/ProductList'
+	}">
+			<columns>
+				<Column>
+					<Text text="Photo" />
+				</Column>
+				<Column>
+					<Text text="Name" />
+				</Column>
+				<Column>
+					<Text text="Description" />
+				</Column>
+				<Column>
+					<Text text="Cart" />
+				</Column>
+				<Column>
+					<Text text="Detail" />
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem>
+					<cells>
+						<Image src="{image}" width="130px" height="190px" />
+						<Text text="{title}" />
+						<Text text="{description}" />
+						<Button text="Add to Cart" press="sepetEkle" />
+						<Button text="Go to Details" press="handleNav" />
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	</Page>
+</mvc:View>

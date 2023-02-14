@@ -1,0 +1,52 @@
+<mvc:View controllerName="com.UI5Starter.Application.CartPage.controller.CartPage"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	height="100%">
+	<Page
+		id="1"
+		title="PRODUCTS"
+		showNavButton="true"
+		navButtonPress="onNavBack"
+	>
+		<Table id="idTable" items="{
+		path: '/arr'
+      
+	}">
+			<columns>
+				<Column>
+					<Text text="URUN ID" />
+				</Column>
+				<Column>
+					<Text text="ÜRÜN BAŞLIK" />
+				</Column>
+				<Column>
+					<Text
+						text="URUN KATEGORI" />
+				</Column>
+				<Column>
+					<Text text="Description" />
+				</Column>
+				<Column>
+					<Text text="ÜRÜNÜ SİL" />
+				</Column>
+				<Column>
+					<Text text="SATIN AL" />
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem>
+					<cells>
+						<Text text="{id}" />
+						<Text text="{title}" />
+						<Text text="{category}" />
+						<Image src="{image}" height="100px"
+							width="100px" />
+							<Button text="SİL" press="urunSil" />
+							<Button text="SATIN AL" press="urunSil" />
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	</Page>
+</mvc:View>
